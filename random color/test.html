@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <p></p>
+    <li></li>
+
+
+    <script>
+        a = document.querySelectorAll("h1, h2, h3, p, li")
+
+        function cl() {
+            c = () => {
+                return Math.floor(Math.random() * (255 - 0))
+            }
+            console.log(c());
+            for (i = 0; i < a.length; i++) {
+                a[i].style.color = `rgb(${c()}, ${c()}, ${c()})`
+                a[i].textContent = 'Hello Twitter!'
+            }
+        }
+        setInterval(cl, 1000)
+    </script>
+</body>
+
+</html>
